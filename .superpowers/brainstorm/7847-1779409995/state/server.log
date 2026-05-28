@@ -1,7 +1,0 @@
-{"type":"server-started","port":60904,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:60904","screen_dir":"/home/blackdance_user/Proyects/estudio-juridico/prop1/.superpowers/brainstorm/7847-1779409995/content","state_dir":"/home/blackdance_user/Proyects/estudio-juridico/prop1/.superpowers/brainstorm/7847-1779409995/state"}
-{"type":"screen-added","file":"/home/blackdance_user/Proyects/estudio-juridico/prop1/.superpowers/brainstorm/7847-1779409995/content/posicion-widget.html"}
-{"type":"screen-added","file":"/home/blackdance_user/Proyects/estudio-juridico/prop1/.superpowers/brainstorm/7847-1779409995/content/visibilidad-contacto.html"}
-{"type":"screen-added","file":"/home/blackdance_user/Proyects/estudio-juridico/prop1/.superpowers/brainstorm/7847-1779409995/content/ventana-chat.html"}
-{"type":"screen-added","file":"/home/blackdance_user/Proyects/estudio-juridico/prop1/.superpowers/brainstorm/7847-1779409995/content/avatar-bot.html"}
-{"type":"screen-added","file":"/home/blackdance_user/Proyects/estudio-juridico/prop1/.superpowers/brainstorm/7847-1779409995/content/waiting-1.html"}
-{"type":"server-stopped","reason":"idle timeout"}
