@@ -1,0 +1,85 @@
+<h2>¿Cómo se abre el chat?</h2>
+<p class="subtitle">Estilo de la ventana cuando el usuario hace clic</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="burbuja" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f6f1e8;padding:0;min-height:240px;border-radius:4px;overflow:hidden;position:relative;">
+
+      <!-- Fondo de página -->
+      <div style="padding:14px;">
+        <div style="background:#e0d8c8;height:8px;width:70%;border-radius:2px;margin-bottom:5px;"></div>
+        <div style="background:#e0d8c8;height:6px;width:50%;border-radius:2px;"></div>
+      </div>
+
+      <!-- Ventana chat compacta -->
+      <div style="position:absolute;bottom:52px;right:10px;width:68%;background:#fff;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,0.18);overflow:hidden;">
+        <!-- Header -->
+        <div style="background:#050505;padding:10px 12px;display:flex;align-items:center;gap:8px;">
+          <div style="width:28px;height:28px;background:#b99a5b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;">⚖️</div>
+          <div>
+            <div style="color:#fdfcf9;font-size:9px;font-weight:bold;">Estudio Jurídico</div>
+            <div style="color:#b99a5b;font-size:7px;">Te ayudamos con tu consulta</div>
+          </div>
+        </div>
+        <!-- Pregunta -->
+        <div style="padding:10px;">
+          <div style="background:#f6f1e8;border-radius:4px;padding:7px;font-size:8px;color:#050505;margin-bottom:8px;">¿Qué tipo de situación querés consultar?</div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="border:1px solid #b99a5b44;padding:5px 8px;font-size:7px;color:#050505;border-radius:2px;cursor:pointer;">🏭 Accidente laboral</div>
+            <div style="border:1px solid #b99a5b44;padding:5px 8px;font-size:7px;color:#050505;border-radius:2px;cursor:pointer;">🛣️ Accidente in itinere</div>
+            <div style="border:1px solid #b99a5b44;padding:5px 8px;font-size:7px;color:#050505;border-radius:2px;cursor:pointer;">💊 Enfermedad profesional</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón flotante -->
+      <div style="position:absolute;bottom:10px;right:10px;background:#b99a5b;border-radius:50px;padding:7px 12px;display:flex;align-items:center;gap:5px;box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+        <span style="font-size:13px;">✕</span>
+        <span style="color:#050505;font-size:8px;font-weight:bold;">Cerrar</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Ventana compacta</h3>
+      <p>El chat se abre justo encima del botón flotante, en la esquina inferior derecha. Compacto, no ocupa toda la pantalla.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="panel" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f6f1e8;padding:0;min-height:240px;border-radius:4px;overflow:hidden;position:relative;display:flex;">
+
+      <!-- Fondo de página -->
+      <div style="flex:1;padding:14px;">
+        <div style="background:#e0d8c8;height:8px;width:70%;border-radius:2px;margin-bottom:5px;"></div>
+        <div style="background:#e0d8c8;height:6px;width:50%;border-radius:2px;margin-bottom:5px;"></div>
+        <div style="background:#e0d8c8;height:6px;width:60%;border-radius:2px;"></div>
+      </div>
+
+      <!-- Panel lateral -->
+      <div style="width:58%;background:#fff;box-shadow:-8px 0 32px rgba(0,0,0,0.15);display:flex;flex-direction:column;">
+        <!-- Header -->
+        <div style="background:#050505;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <div style="width:22px;height:22px;background:#b99a5b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;">⚖️</div>
+            <div style="color:#fdfcf9;font-size:8px;font-weight:bold;">Consultá ahora</div>
+          </div>
+          <span style="color:#fdfcf9;font-size:10px;">✕</span>
+        </div>
+        <!-- Pregunta -->
+        <div style="padding:10px;flex:1;">
+          <div style="background:#f6f1e8;border-radius:4px;padding:7px;font-size:7px;color:#050505;margin-bottom:8px;">¿Qué tipo de situación querés consultar?</div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="border:1px solid #b99a5b44;padding:5px 8px;font-size:7px;color:#050505;border-radius:2px;">🏭 Accidente laboral</div>
+            <div style="border:1px solid #b99a5b44;padding:5px 8px;font-size:7px;color:#050505;border-radius:2px;">🛣️ Accidente in itinere</div>
+            <div style="border:1px solid #b99a5b44;padding:5px 8px;font-size:7px;color:#050505;border-radius:2px;">💊 Enfermedad profesional</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Panel lateral</h3>
+      <p>El chat se desliza desde la derecha como un panel que ocupa parte de la pantalla. Más espacio para leer las opciones.</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,74 @@
+<h2>¿Cómo lo ve el usuario?</h2>
+<p class="subtitle">El botón del hero abre el chat — ¿qué pasa cuando scrollean?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="hero-mas-flotante" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#050505;padding:0;min-height:220px;border-radius:4px;overflow:hidden;position:relative;">
+
+      <!-- Hero section -->
+      <div style="background:#050505;padding:14px;border-bottom:1px solid #222;">
+        <div style="color:#b99a5b;font-size:8px;letter-spacing:2px;margin-bottom:6px;">DR. PONTE WISTO LEONARDO & ASOC.</div>
+        <div style="background:#1a1a1a;height:10px;width:75%;border-radius:2px;margin-bottom:4px;"></div>
+        <div style="background:#1a1a1a;height:8px;width:55%;border-radius:2px;margin-bottom:12px;"></div>
+        <div style="display:inline-flex;align-items:center;gap:6px;background:#b99a5b;padding:6px 12px;border-radius:2px;">
+          <span style="font-size:11px;">💬</span>
+          <span style="color:#050505;font-size:9px;font-weight:bold;">INICIÁ TU CONSULTA</span>
+        </div>
+      </div>
+
+      <!-- Sección scrolleada -->
+      <div style="background:#f6f1e8;padding:14px;">
+        <div style="background:#e8e0d0;height:8px;width:60%;border-radius:2px;margin-bottom:4px;"></div>
+        <div style="background:#e8e0d0;height:6px;width:80%;border-radius:2px;margin-bottom:4px;"></div>
+        <div style="background:#e8e0d0;height:6px;width:50%;border-radius:2px;"></div>
+      </div>
+
+      <!-- Botón flotante -->
+      <div style="position:absolute;bottom:10px;right:10px;background:#b99a5b;border-radius:50px;padding:7px 12px;display:flex;align-items:center;gap:5px;box-shadow:0 4px 12px rgba(0,0,0,0.4);">
+        <span style="font-size:13px;">💬</span>
+        <span style="color:#050505;font-size:8px;font-weight:bold;">Consultar</span>
+      </div>
+
+    </div>
+    <div class="card-body">
+      <h3>A — Hero + botón flotante</h3>
+      <p>El CTA del hero abre el chat. Al scrollear, un botón flotante dorado sigue visible en la esquina — el chat siempre está a mano.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="hero-solo-prominente" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#050505;padding:0;min-height:220px;border-radius:4px;overflow:hidden;position:relative;">
+
+      <!-- Hero con CTA muy destacado -->
+      <div style="background:#050505;padding:14px;">
+        <div style="color:#b99a5b;font-size:8px;letter-spacing:2px;margin-bottom:6px;">DR. PONTE WISTO LEONARDO & ASOC.</div>
+        <div style="background:#1a1a1a;height:10px;width:75%;border-radius:2px;margin-bottom:4px;"></div>
+        <div style="background:#1a1a1a;height:8px;width:55%;border-radius:2px;margin-bottom:10px;"></div>
+
+        <!-- CTA principal grande -->
+        <div style="display:flex;align-items:center;gap:8px;background:#b99a5b;padding:8px 14px;border-radius:2px;margin-bottom:6px;">
+          <span style="font-size:14px;">💬</span>
+          <div>
+            <div style="color:#050505;font-size:9px;font-weight:bold;">INICIÁ TU CONSULTA GRATIS</div>
+            <div style="color:#05050599;font-size:7px;">Respondemos por WhatsApp</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior fija -->
+      <div style="position:absolute;bottom:0;left:0;right:0;background:#b99a5b;padding:7px 14px;display:flex;align-items:center;justify-content:space-between;">
+        <span style="color:#050505;font-size:8px;font-weight:bold;">¿Tenés una consulta? Escribinos</span>
+        <div style="background:#050505;padding:4px 8px;border-radius:2px;">
+          <span style="color:#b99a5b;font-size:8px;font-weight:bold;">CONSULTAR 💬</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="card-body">
+      <h3>B — Hero + barra inferior fija</h3>
+      <p>CTA grande en el hero. Al scrollear, una barra dorada fija en el fondo de pantalla recuerda que pueden consultar.</p>
+    </div>
+  </div>
+
+</div>

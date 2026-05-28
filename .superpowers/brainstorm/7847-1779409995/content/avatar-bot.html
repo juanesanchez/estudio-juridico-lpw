@@ -1,0 +1,144 @@
+<h2>¿Qué avatar tiene el bot abogado?</h2>
+<p class="subtitle">Así se vería en el header del chat. Todos en paleta dorado/negro del estudio.</p>
+
+<div class="cards">
+
+  <!-- OPCION A: Balanza + cara robot -->
+  <div class="card" data-choice="balanza-robot" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#050505;padding:0;min-height:200px;border-radius:4px;overflow:hidden;">
+      <!-- Chat header -->
+      <div style="background:#0d0d0d;padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #b99a5b33;">
+        <!-- Avatar -->
+        <div style="width:48px;height:48px;background:#b99a5b;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <!-- Cara robot -->
+            <rect x="6" y="7" width="16" height="12" rx="3" fill="#050505"/>
+            <!-- Ojos -->
+            <rect x="9" y="11" width="3" height="3" rx="1" fill="#b99a5b"/>
+            <rect x="16" y="11" width="3" height="3" rx="1" fill="#b99a5b"/>
+            <!-- Boca / línea -->
+            <rect x="10" y="16" width="8" height="1.5" rx="1" fill="#b99a5b"/>
+            <!-- Antena con balanza -->
+            <line x1="14" y1="7" x2="14" y2="4" stroke="#050505" stroke-width="1.5"/>
+            <line x1="10" y1="4" x2="18" y2="4" stroke="#050505" stroke-width="1.5"/>
+            <line x1="10" y1="4" x2="10" y2="6" stroke="#050505" stroke-width="1"/>
+            <line x1="18" y1="4" x2="18" y2="6" stroke="#050505" stroke-width="1"/>
+            <!-- Cuerpo -->
+            <rect x="10" y="19" width="8" height="5" rx="1" fill="#050505"/>
+            <rect x="12" y="21" width="4" height="1.5" rx="0.5" fill="#b99a5b"/>
+          </svg>
+          <!-- Punto verde "online" -->
+          <div style="position:absolute;bottom:2px;right:2px;width:10px;height:10px;background:#4ade80;border-radius:50%;border:2px solid #0d0d0d;"></div>
+        </div>
+        <div>
+          <div style="color:#fdfcf9;font-size:13px;font-weight:600;">Lex — Asistente Legal</div>
+          <div style="color:#b99a5b;font-size:11px;">En línea · Te ayudamos ahora</div>
+        </div>
+      </div>
+      <!-- Preview burbuja mensaje -->
+      <div style="padding:14px 16px;">
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="width:28px;height:28px;background:#b99a5b;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 28 28" fill="none"><rect x="6" y="7" width="16" height="12" rx="3" fill="#050505"/><rect x="9" y="11" width="3" height="3" rx="1" fill="#b99a5b"/><rect x="16" y="11" width="3" height="3" rx="1" fill="#b99a5b"/></svg>
+          </div>
+          <div style="background:#1a1a1a;border-radius:0 8px 8px 8px;padding:10px 12px;max-width:80%;">
+            <div style="color:#fdfcf9;font-size:10px;line-height:1.5;">Hola, soy <strong style="color:#b99a5b;">Lex</strong>. ¿En qué tipo de situación puedo ayudarte?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Robot con balanza (Lex)</h3>
+      <p>Avatar estilo robot minimalista con balanza en la antena. Nombre sugerido: <em>Lex</em>. Serio y reconocible.</p>
+    </div>
+  </div>
+
+  <!-- OPCION B: Toga/birrete -->
+  <div class="card" data-choice="birrete" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#050505;padding:0;min-height:200px;border-radius:4px;overflow:hidden;">
+      <div style="background:#0d0d0d;padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #b99a5b33;">
+        <!-- Avatar con birrete -->
+        <div style="width:48px;height:48px;background:#b99a5b;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <!-- Birrete -->
+            <rect x="7" y="5" width="16" height="3" rx="1" fill="#050505"/>
+            <rect x="13" y="3" width="4" height="3" rx="1" fill="#050505"/>
+            <line x1="23" y1="6" x2="23" y2="10" stroke="#050505" stroke-width="1.5"/>
+            <circle cx="23" cy="11" r="1.5" fill="#050505"/>
+            <!-- Cara -->
+            <rect x="8" y="9" width="14" height="11" rx="3" fill="#050505"/>
+            <!-- Ojos -->
+            <rect x="10.5" y="13" width="3" height="3" rx="1" fill="#b99a5b"/>
+            <rect x="16.5" y="13" width="3" height="3" rx="1" fill="#b99a5b"/>
+            <!-- Boca -->
+            <path d="M11 18.5 Q15 21 19 18.5" stroke="#b99a5b" stroke-width="1.2" fill="none"/>
+            <!-- Cuello / toga -->
+            <rect x="11" y="20" width="8" height="6" rx="1" fill="#050505"/>
+            <rect x="13" y="20" width="4" height="2" fill="#fdfcf9" opacity="0.9"/>
+          </svg>
+          <div style="position:absolute;bottom:2px;right:2px;width:10px;height:10px;background:#4ade80;border-radius:50%;border:2px solid #0d0d0d;"></div>
+        </div>
+        <div>
+          <div style="color:#fdfcf9;font-size:13px;font-weight:600;">Dr. Bot — Asesor Legal</div>
+          <div style="color:#b99a5b;font-size:11px;">En línea · Consultá sin cargo</div>
+        </div>
+      </div>
+      <div style="padding:14px 16px;">
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="width:28px;height:28px;background:#b99a5b;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;">🎓</div>
+          <div style="background:#1a1a1a;border-radius:0 8px 8px 8px;padding:10px 12px;max-width:80%;">
+            <div style="color:#fdfcf9;font-size:10px;line-height:1.5;">Hola, soy el <strong style="color:#b99a5b;">asistente legal</strong> del estudio. Contame tu situación.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Robot con birrete (Dr. Bot)</h3>
+      <p>Robot con toga y birrete, cuello blanco de abogado. Más formal y reconocible como figura jurídica.</p>
+    </div>
+  </div>
+
+  <!-- OPCION C: Gavel shield -->
+  <div class="card" data-choice="escudo" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#050505;padding:0;min-height:200px;border-radius:4px;overflow:hidden;">
+      <div style="background:#0d0d0d;padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #b99a5b33;">
+        <!-- Avatar escudo + martillo -->
+        <div style="width:48px;height:48px;background:#b99a5b;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <!-- Escudo -->
+            <path d="M14 3 L23 7 L23 15 Q23 21 14 25 Q5 21 5 15 L5 7 Z" fill="#050505"/>
+            <!-- Balanza dentro del escudo -->
+            <line x1="14" y1="9" x2="14" y2="12" stroke="#b99a5b" stroke-width="1.2"/>
+            <line x1="10" y1="12" x2="18" y2="12" stroke="#b99a5b" stroke-width="1.2"/>
+            <line x1="10" y1="12" x2="10" y2="15" stroke="#b99a5b" stroke-width="1"/>
+            <line x1="18" y1="12" x2="18" y2="15" stroke="#b99a5b" stroke-width="1"/>
+            <circle cx="10" cy="15.5" r="1.2" fill="#b99a5b"/>
+            <circle cx="18" cy="15.5" r="1.2" fill="#b99a5b"/>
+            <!-- Base -->
+            <line x1="12" y1="19" x2="16" y2="19" stroke="#b99a5b" stroke-width="1.2"/>
+          </svg>
+          <div style="position:absolute;bottom:2px;right:2px;width:10px;height:10px;background:#4ade80;border-radius:50%;border:2px solid #0d0d0d;"></div>
+        </div>
+        <div>
+          <div style="color:#fdfcf9;font-size:13px;font-weight:600;">Asistente Legal PW</div>
+          <div style="color:#b99a5b;font-size:11px;">En línea · Primera consulta gratis</div>
+        </div>
+      </div>
+      <div style="padding:14px 16px;">
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="width:28px;height:28px;background:#b99a5b;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+            <svg width="14" height="14" viewBox="0 0 28 28" fill="none"><path d="M14 3 L23 7 L23 15 Q23 21 14 25 Q5 21 5 15 L5 7 Z" fill="#050505"/></svg>
+          </div>
+          <div style="background:#1a1a1a;border-radius:0 8px 8px 8px;padding:10px 12px;max-width:80%;">
+            <div style="color:#fdfcf9;font-size:10px;line-height:1.5;">Bienvenido al estudio. ¿En qué podemos <strong style="color:#b99a5b;">ayudarte hoy</strong>?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Escudo con balanza</h3>
+      <p>No es un robot, es un escudo institucional con la balanza de la justicia. Más formal, menos "tech", más acorde a un estudio serio.</p>
+    </div>
+  </div>
+
+</div>

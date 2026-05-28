@@ -1,0 +1,9 @@
+node_modules
+.next
+.env
+.env.local
+.env*.local
+*.Zone.Identifier
+tsconfig.tsbuildinfo
+.vercel
+next-env.d.ts

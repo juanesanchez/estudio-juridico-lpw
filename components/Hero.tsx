@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, Bot } from "lucide-react";
 import Image from "next/image";
 
 type HeroProps = {
@@ -30,19 +30,21 @@ export function Hero({ onOpenChat }: HeroProps) {
           transition={{ duration: 0.45, ease: "easeOut" }}
         >
           <h1 className="font-sans text-[clamp(2.25rem,4.5vw,4.4rem)] font-semibold leading-[1.05] text-balance text-porcelain">
-            Defensa legal en accidentes laborales y ART
+            ¿Sufriste un accidente?
           </h1>
           <p className="mt-5 max-w-lg text-base leading-7 text-porcelain/76">
-            Asesoramiento claro para trabajadores que necesitan reclamar cobertura, tratamiento
-            médico o una indemnización justa frente a la ART.
+            Reclamá con nuestro equipo de abogados expertos. Las aseguradoras no siempre tienen la razón.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button
               onClick={onOpenChat}
-              className="group inline-flex items-center justify-center gap-3 bg-gold px-6 py-3.5 text-sm font-bold text-ink transition-colors hover:bg-gold-soft"
+              className="group relative inline-flex items-center justify-center gap-3 bg-gold px-6 py-3.5 text-sm font-bold text-ink transition-colors hover:bg-gold-soft"
             >
-              <MessageCircle size={18} />
-              Iniciá tu consulta
+              <Bot size={18} />
+              <span className="flex flex-col items-start leading-tight">
+                <span>Iniciá tu consulta</span>
+                <span className="text-[10px] font-normal opacity-70">Asistente virtual · 2 min</span>
+              </span>
             </button>
             <a
               href="#art"
