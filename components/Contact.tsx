@@ -18,19 +18,28 @@ export function Contact() {
     const phone = String(form.get("phone") || "").trim();
     const matter = String(form.get("matter") || "").trim();
     const message = String(form.get("message") || "").trim();
-    const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-    if (!name || !validEmail || !message) {
+    if (!name || !message) {
       setState("error");
       return;
     }
 
+    const lines = [
+      `Hola, me comunico desde el sitio web.`,
+      ``,
+      `*Nombre:* ${name}`,
+      email ? `*Email:* ${email}` : null,
+      phone ? `*Teléfono:* ${phone}` : null,
+      matter ? `*Materia:* ${matter}` : null,
+      ``,
+      `*Consulta:*`,
+      message,
+    ]
+      .filter((l) => l !== null)
+      .join("\n");
+
     setState("success");
-    const subject = encodeURIComponent(`Consulta ART - ${name}`);
-    const body = encodeURIComponent(
-      `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone || "-"}\nMateria: ${matter || "-"}\n\nConsulta:\n${message}`,
-    );
-    window.location.href = `${firm.emailHref}?subject=${subject}&body=${body}`;
+    window.open(`https://wa.me/5491168063420?text=${encodeURIComponent(lines)}`, "_blank");
     event.currentTarget.reset();
   }
 
@@ -120,9 +129,7 @@ export function Contact() {
                 >
                   <option value="" className="bg-ink">Seleccionar</option>
                   <option value="Accidente laboral" className="bg-ink">Accidente laboral</option>
-                  <option value="Accidente in itinere" className="bg-ink">Accidente in itinere</option>
-                  <option value="Reclamo ART" className="bg-ink">Reclamo ART</option>
-                  <option value="Otra consulta" className="bg-ink">Otra consulta</option>
+                  <option value="Accidente de tránsito" className="bg-ink">Accidente de tránsito</option>
                 </select>
               </label>
             </div>
@@ -146,12 +153,12 @@ export function Contact() {
               </button>
               {state === "error" && (
                 <p className="text-sm leading-6 text-gold-soft">
-                  Completá nombre, email válido y consulta para continuar.
+                  Completá nombre y consulta para continuar.
                 </p>
               )}
               {state === "success" && (
                 <p className="text-sm leading-6 text-gold-soft">
-                  Consulta preparada. También podés escribir por WhatsApp para respuesta directa.
+                  Se abrió WhatsApp con tu consulta lista para enviar.
                 </p>
               )}
             </div>
