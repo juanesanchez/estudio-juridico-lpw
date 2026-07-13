@@ -38,7 +38,7 @@ export function ChatWidget({ isOpen, setIsOpen }: ChatWidgetProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.92, y: 16 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
-            className="fixed bottom-20 left-2 right-2 z-50 flex h-[calc(100dvh-6rem)] flex-col overflow-hidden border border-porcelain/10 shadow-lift sm:left-auto sm:right-4 sm:h-[680px] sm:w-96"
+            className="fixed bottom-4 left-2 right-2 z-50 flex h-[calc(100dvh-2rem)] flex-col overflow-hidden border border-porcelain/10 shadow-lift sm:left-auto sm:right-4 sm:h-[540px] sm:w-96"
           >
             <button
               onClick={() => setIsOpen(false)}
