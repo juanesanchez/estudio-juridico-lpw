@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { SectionReveal } from "@/components/SectionReveal";
+import { trackEvent } from "@/lib/analytics";
 import { firm } from "@/lib/site-data";
 
 type FormState = "idle" | "error" | "success";
@@ -39,6 +40,7 @@ export function Contact() {
       .join("\n");
 
     setState("success");
+    trackEvent("contact_form_lead", { matter: matter || "sin especificar" });
     window.open(`https://wa.me/5491168063420?text=${encodeURIComponent(lines)}`, "_blank");
     event.currentTarget.reset();
   }
@@ -61,6 +63,7 @@ export function Contact() {
               href={firm.addressHref}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackEvent("directions_click", { location: "contacto" })}
               className="flex items-center gap-4 border-b border-porcelain/14 pb-3 text-porcelain/78 transition-colors hover:text-gold"
             >
               <MapPin size={18} />
@@ -68,6 +71,7 @@ export function Contact() {
             </a>
             <a
               href={firm.phoneHref}
+              onClick={() => trackEvent("phone_click", { location: "contacto" })}
               className="flex items-center gap-4 border-b border-porcelain/14 pb-3 text-porcelain/78 transition-colors hover:text-gold"
             >
               <Phone size={18} />
@@ -75,6 +79,7 @@ export function Contact() {
             </a>
             <a
               href={firm.emailHref}
+              onClick={() => trackEvent("email_click", { location: "contacto" })}
               className="flex items-center gap-4 border-b border-porcelain/14 pb-3 text-porcelain/78 transition-colors hover:text-gold"
             >
               <Mail size={18} />
@@ -84,6 +89,7 @@ export function Contact() {
               href={firm.whatsappHref}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackEvent("whatsapp_click", { location: "contacto" })}
               className="inline-flex items-center gap-3 bg-gold px-5 py-3.5 text-sm font-bold text-ink transition-colors hover:bg-gold-soft"
             >
               <MessageCircle size={18} />
@@ -172,6 +178,7 @@ export function Contact() {
             href={firm.addressHref}
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackEvent("directions_click", { location: "mapa" })}
             className="group flex flex-col items-center gap-3 border border-porcelain/16 bg-[#080808] px-5 py-4 text-center transition-colors hover:border-gold/40 sm:flex-row sm:gap-4 sm:text-left"
           >
             <div className="flex-shrink-0">

@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { Scale, X } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 import { ChatWindow } from "./ChatWindow";
 
 type ChatWidgetProps = {
@@ -81,7 +82,10 @@ export function ChatWidget({ isOpen, setIsOpen }: ChatWidgetProps) {
                   <span className="relative inline-flex h-3.5 w-3.5 rounded-full border-2 border-ink bg-gold" />
                 </span>
                 <button
-                  onClick={() => setIsOpen(true)}
+                  onClick={() => {
+                    trackEvent("chat_open", { location: "boton-flotante" });
+                    setIsOpen(true);
+                  }}
                   aria-label="Abrir chat de consulta"
                   className="flex items-center gap-2.5 rounded-full bg-gold px-5 py-3.5 text-sm font-bold text-ink shadow-[0_4px_20px_rgba(185,154,91,0.5)] transition-colors hover:bg-gold-soft"
                 >

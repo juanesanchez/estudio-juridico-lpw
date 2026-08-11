@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Bot } from "lucide-react";
 import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 
 type HeroProps = {
   onOpenChat: () => void;
@@ -37,7 +38,10 @@ export function Hero({ onOpenChat }: HeroProps) {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button
-              onClick={onOpenChat}
+              onClick={() => {
+                trackEvent("chat_open", { location: "hero" });
+                onOpenChat();
+              }}
               className="group relative inline-flex items-center justify-center gap-3 bg-gold px-6 py-3.5 text-sm font-bold text-ink transition-colors hover:bg-gold-soft"
             >
               <Bot size={18} />

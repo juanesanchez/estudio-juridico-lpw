@@ -2,6 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 import { firm, navItems } from "@/lib/site-data";
 
 export function Navbar() {
@@ -48,6 +49,7 @@ export function Navbar() {
             href={firm.whatsappHref}
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackEvent("whatsapp_click", { location: "navbar" })}
             className="border border-gold bg-gold px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-gold-soft"
           >
             Consulta
@@ -84,6 +86,7 @@ export function Navbar() {
             href={firm.whatsappHref}
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackEvent("whatsapp_click", { location: "navbar-mobile" })}
             className="mt-2 block bg-gold px-4 py-3 text-center text-sm font-semibold text-ink"
           >
             Consulta

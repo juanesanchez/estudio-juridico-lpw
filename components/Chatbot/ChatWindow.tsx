@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { trackEvent } from "@/lib/analytics";
 import { chatTree } from "@/lib/chat-tree";
 import type { ChatNode } from "@/lib/chat-tree";
 import { LexAvatar } from "./LexAvatar";
@@ -53,6 +54,12 @@ const ART_FIELDS: FormField[] = [
 ];
 
 const WHATSAPP_NUMBER = "5491168063420";
+
+/** Categoria de caso que se reporta a Google Ads / GA4. */
+const CASE_TYPE: Record<"form-transito" | "form-art", string> = {
+  "form-transito": "accidente-transito",
+  "form-art": "accidente-laboral-art",
+};
 
 const INPUT_CLASS =
   "border border-porcelain/15 bg-ink/60 px-3 py-2 text-xs text-porcelain placeholder-porcelain/40 outline-none focus:border-gold w-full";
@@ -143,6 +150,7 @@ export function ChatWindow() {
   function handleOption(optionText: string, nextId: string) {
     setHistory((prev) => [...prev, { q: currentNode.message, a: optionText }]);
     if (nextId === "form-transito" || nextId === "form-art") {
+      trackEvent("chatbot_form_start", { case_type: CASE_TYPE[nextId] });
       setPhase(nextId);
     } else {
       setCurrentNodeId(nextId);
@@ -155,6 +163,10 @@ export function ChatWindow() {
     const fields = isTransito ? TRANSITO_FIELDS : ART_FIELDS;
     const caseType = isTransito ? "Accidente de tránsito" : "Accidente laboral / ART";
     const message = buildWhatsAppMessage(caseType, fields, formValues);
+    // Solo se reporta la categoria del caso: nunca los datos cargados en el formulario.
+    trackEvent("chatbot_lead", {
+      case_type: CASE_TYPE[isTransito ? "form-transito" : "form-art"],
+    });
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
     setPhase("done");
   }
